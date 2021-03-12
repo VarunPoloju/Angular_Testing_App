@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Testing';
+
+  name:string="cognizant";
+
+
+  getData(a,b){
+    return a+b;
+  }
 }

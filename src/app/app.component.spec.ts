@@ -32,4 +32,26 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.content span').textContent).toContain('Testing app is running!');
   });
+
+  it('name should be equal to cognizant ', ()=>{
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.name).toEqual("cognizant")
+  })
+
+
+  it('header should be welcome',()=>{
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('.heading').textContent).toContain('Wel');
+  })
+
+
+  it('get data method should return number',()=>{
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.getData(100,200)).toBe (300)
+  })
+
 });
